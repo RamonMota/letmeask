@@ -1,17 +1,24 @@
 import {useHistory} from 'react-router-dom'
 
+
 import illustrationImg from '../assets/images/illustration.svg';
 import LogoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
-import '../styles/auth.scss'
 import { Button } from '../components/Button'
+import { useAuth } from '../hooks/useAuth';
+import '../styles/auth.scss'
 
 
 export function Home() {
     const history = useHistory();
+    const {user, signInWithGoogle} = useAuth()
+    
+    async function hundleCreateRoom() {
+        if (!user) {
+           await signInWithGoogle()
+        }
 
-    function navegateToNewRoom() {
         history.push('/rooms/new')
     }
     return (
@@ -29,7 +36,7 @@ export function Home() {
             <main>
                 <div className="main-content">
                     <img src={LogoImg} alt="LatmeAsk's Logo" />
-                    <button onClick={navegateToNewRoom} className="create-room-google">
+                    <button onClick={hundleCreateRoom} className="create-room-google">
                         <img src={googleIconImg} alt="Google's logo" />
                         Crie sua sala com o Google
                     </button>
