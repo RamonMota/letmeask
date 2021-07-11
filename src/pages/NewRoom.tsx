@@ -1,3 +1,4 @@
+import { FormEvent, useState } from 'react'
 import {Link} from 'react-router-dom'
 import illustrationImg from '../assets/images/illustration.svg';
 import LogoImg from '../assets/images/logo.svg';
@@ -5,11 +6,30 @@ import LogoImg from '../assets/images/logo.svg';
 import '../styles/auth.scss'
 import { Button } from '../components/Button'
 import { useAuth } from '../hooks/useAuth';
+import { database } from '../services/firebase'
 
 
 export function NewRoom() {
-     const {user} = useAuth()
-     console.log({user})
+    const {user} = useAuth()
+    console.log({user})
+
+    const [newRoom, setNewRoom] = useState('');
+
+    async function hundleCreateRoom(event: FormEvent) {
+        event.preventDefault();
+
+        if( newRoom.trim() == "") {
+            return
+        }
+
+        const roomRef = database.ref('rooms');
+
+        const firebaseRoom = await roomRef.push({
+            title: newRoom,
+            authorId:user?.id,
+        });
+    }
+    
     return (
         <div id="page-auth">
             <aside>
@@ -27,10 +47,12 @@ export function NewRoom() {
                     <img src={LogoImg} alt="LatmeAsk's Logo" />
                     <h2>Criar uma nova sala</h2>
                     <div className="separator">ou entre em uma sala</div>
-                    <form>
+                    <form onSubmit={hundleCreateRoom}>
                         <input 
                         type="text"
                         placeholder="Nome da Sala"
+                        onChange={event => setNewRoom(event.target.value)}
+                        value={newRoom}
                         />
                         <Button type="submit" >
                             Criar sala
