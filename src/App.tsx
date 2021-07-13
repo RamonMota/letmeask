@@ -18,8 +18,6 @@ function App() {
           <Route path="/rooms/:id" component={Room} />
         </Switch>
       </AuthContextProvider>
-  
-      
     </BrowserRouter>
   );
 }
