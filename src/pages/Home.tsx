@@ -40,7 +40,7 @@ export function Home() {
 
         history.push(`rooms/${roomCode}`)
     }
-//32 min
+//36 min
     return (
         <div id="page-auth">
             <aside>
