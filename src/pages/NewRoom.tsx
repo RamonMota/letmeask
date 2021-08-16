@@ -12,7 +12,7 @@ import { database } from '../services/firebase'
 export function NewRoom() {
     const {user} = useAuth()
     const history = useHistory()
-    console.log({user})
+    
 
     const [newRoom, setNewRoom] = useState('');
 

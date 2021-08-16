@@ -37,10 +37,14 @@ export function Home() {
             alert('Room does not exists.')
             return;
         }
+        if (roomRef.val().endedAt) {
+            alert('Room already closed.');
+            return
+        }
+         
 
         history.push(`rooms/${roomCode}`)
     }
-//36 min
     return (
         <div id="page-auth">
             <aside>
