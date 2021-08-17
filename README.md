@@ -3,11 +3,10 @@
 </p>
 <br>
 
-<h1 align="center" >This project was created</h1>
+<h1 align="center" >this project was created in the React mission at NLW #06
+</h1>
 
-<p align="center" >Letmeask é perfeito para criadores de conteúdos poderem criar salas de Q&A com o seu público, de uma forma muito organizada e democrática.</p>
-
-<p align="center" >Este é um projeto desenvolvido durante a Next Level Week Together, apresentada dos dias 20 a 27 de Junho de 2021.</p>
+<p align="center" >Letmeask it's platform thought to "content creators" organize your live chats and answer them questions</p>
 
 <br>
 
@@ -15,46 +14,47 @@
     <img align="center" alt="Letmeask" src=".github/cover.svg" />
 </p>
 
-# Getting Started with Create React App
+<br>
 
-# 🤖 Tecnologias
+# 🤖 Technologies
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+This project was developer with this Technologies
 
 - [React](https://reactjs.org)
 - [Firebase](https://firebase.google.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-# 🕹️ Como executar
+# 🕹️ How started
 
-Clone o projeto e acesse a pasta do mesmo.
+Clone the project and go to the correct folder
 
 ```bash
 $ git clone https://github.com/RamonMota/letmeask.git
 ```
 <br>
 
-Instalar as dependências
+
+Install the dependencies
 ```bash
 $ npm install
 ```
 <br>
 
-Iniciar o projeto
+Start the project
 ```bash
 
 $ npm start
 ```
-
-O app estará disponível no seu browser pelo endereço http://localhost:3000.
+You will run this project on your browser in the address http://localhost:3000.
 
 ### 💡 Pay attention
-Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/) e um projeto para disponibilizar um Realtime Database.
+Remember, to start this project you will need create a account [Firebase](https://firebase.google.com/) and a "Realtime Database" project.
 
 # 🗺️ Layout
 
-Você pode visualizar o layout do projeto através do link abaixo:
+You can see the layout project between the link below:
 
-- [Layout Web](https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask/duplicate) 
+- [Layout Web](https://www.figma.com/file/u0BQK8rCf2KgzcukdRRCWh/Letmeask/duplicate)
 
-Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
+
+🤙 Peace
