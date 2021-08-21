@@ -18,7 +18,7 @@
 
 # 🤖 Technologies
 
-This project was developer with this Technologies
+This project was developed with this Technologies
 
 - [React](https://reactjs.org)
 - [Firebase](https://firebase.google.com/)
